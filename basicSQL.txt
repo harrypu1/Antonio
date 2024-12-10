@@ -1,0 +1,48 @@
+--->The CREATE TABLE command is used to create a new table in the DATABASE
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    BirthDate DATE,
+    HireDate DATE,
+    Salary DECIMAL(10, 2)
+);
+---------------------------
+
+The ALTER TABLE command is used to modify an existing table's structure.
+-->Add a new column:
+ALTER TABLE Employees
+ADD Email VARCHAR(100);
+
+-->Remove a column:
+ALTER TABLE Employees
+DROP COLUMN Email;
+------------------------------
+
+-->The INSERT command is used to add new rows of data to a table. 
+INSERT INTO Employees VALUES 
+    (100, 'John', 'Doe', ’05-15-2000', ‘01-01-2024', 60000.00)
+
+SELECT * FROM Employees;
+--------------------------------
+-->RENAME TABLE Command
+ALTER TABLE Employees RENAME TO Staff;
+
+---------------------------------
+->UPDATE TABLE Command
+UPDATE Employees
+SET Salary = 65000.00
+WHERE EmployeeID = 100;
+---------------------------------
+
+-->The DELETE command is used to remove rows from a table.
+
+DELETE FROM Employees
+WHERE EmployeeID = 100;
+-----------------------------------
+
+-->The DROP TABLE command is used to delete a table and its data from the database. 
+
+DROP TABLE Employees;
+
+------------------------------------
